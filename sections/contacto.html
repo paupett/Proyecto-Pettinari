@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Contacto</title>    
+</head>
+<body>
+  <div class="grillaContacto">
+    <div class="marca">
+        <h1>PAPER CRAFTS</h1>
+    </div>  
+    <nav>
+        <ul>
+            <li>
+              <a href="../index.html">Inicio</a>  
+            </li>
+            <li>
+              <a href="productos.html">Productos</a>
+            </li>
+            <li>
+              <a href="galeria.html">Galería</a>
+            </li>
+            <li>
+              <a href="nosotros.html">Nosotros</a>
+            </li>
+            <li>
+              <a href="contacto.html">Contacto</a>
+            </li>
+        </ul>   
+    </nav>   
+    <main>
+    </section>
+    <!-- formulario de contacto -->
+    <section>
+      <article class="formContacto">
+        <form action="#">
+          <label for="nombre">Nombre y Apellido</label>
+          <input type="text" name="nombre"><br>
+          <label for="email">E-mail:
+            <input type="email" placeholder="aaa@gmail.com" name="email"><br>
+          </label>
+          <label for="mensaje"> Mensaje:<br>
+            <textarea name="mensaje" placeholder="Me gustaría pedir un presupuesto..."></textarea>
+          </label> <br>           
+            <div><p class="pDeContacto">Tipo de evento:</p>
+            <section class="opcionesForm">
+              <div>Cumpleaños infantil
+                <input type="radio" name="lado" value="cumpleaños infantil">
+              </div>
+              <div>Cumpleaños adulto
+                <input type="radio" name="lado" value="cumpleaños adulto">
+              </div>
+              <div>Corporativo
+                <input type="radio" name="lado" value="corporativo">
+              </div>
+              <div>Otro
+                <input type="radio" name="lado" value="Otro"><br>
+                <textarea name="otro" placeholder="cuál?"></textarea>                       
+              </div>  
+            </section>
+            
+          <p class="pDeContacto">Dónde se realizará el evento?</p>
+            <div class="opcionesForm">
+              <select name="lugar" id="lugar"> 
+                <option value="caba">CABA</option>
+                <option value="gba n">GBA Norte</option>
+                <option value="gba s">GBA Sur</option>
+                <option value="gba o">GBA Oeste</option>
+              </select>
+            </div>              
+          <div>Queres recibir info sobre nosotros?
+          <input type="checkbox" name="acepta" value="1"></div>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Borrar">
+        </form>
+      </article>
+    </section>
+    <!-- cierre de form contacto -->
+    </main>
+    <footer>
+      <div>
+        <h4>Seguinos en nuestras redes sociales</h4> 
+          <a href="https://www.facebook.com/" target="_blank"></a>
+          <a href="https://www.instagram.com/" target="_blank"></a>
+      </div>
+    </footer>   
+  </div> 
+</body>
+</html>
