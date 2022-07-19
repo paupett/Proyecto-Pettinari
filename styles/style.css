@@ -63,24 +63,20 @@ a{
     text-align: center;
     grid-area: todo;
 }
-
+.tituloTodo:hover{
+    transform: scale(2);
+}
+.tituloTodo{
+    transition-duration: 5s;
+}
 .pinata{
-    grid-area: pinata;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
+    grid-area: pinata;    
 }
 .deco{
-    grid-area: deco;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
+    grid-area: deco;    
 }
 .mas{
-    grid-area: mas;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
+    grid-area: mas;    
 }
 footer{
     background-color: #F18BD6;
@@ -88,18 +84,33 @@ footer{
     padding: 10px;
     grid-area: footer;
 }
-
+.seguinos:hover{
+    transform: scale(2);
+    transition-duration: 2s;
+}
+.fotoPinata:hover{
+    transform:translate(10px, 10px)
+}
 .fotoPinata{
     border: solid;
     border-color: #77C1F7;
+    transition-duration: 2s;
+}
+.fotoDeco:hover{
+    transform:translate(10px, 10px)
 }
 .fotoDeco{
     border: solid;
     border-color: #F18BD6;
+    transition-duration: 2s;
+}
+.muchoMas:hover{
+    transform:translate(10px, 10px)
 }
 .muchoMas{
     border: solid;
     border-color: #77C1F7;
+    transition-duration: 2s;
 }
 
 /***nosotros***/
