@@ -40,7 +40,7 @@ font-family: 'Chelsea Market', cursive;
     text-align: center;
     padding: 20px 0px 20px 0px;
 }
-nav{
+.barraNav{
     background-color: #F18BD6;
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
@@ -62,12 +62,6 @@ a{
     font-size: 30px;
     text-align: center;
     grid-area: todo;
-}
-.tituloTodo:hover{
-    transform: scale(2);
-}
-.tituloTodo{
-    transition-duration: 5s;
 }
 .pinata{
     grid-area: pinata;    
@@ -148,7 +142,7 @@ footer{
 }
 /***responsive***/
 
-@media screen and (min-width:600px){
+@media screen and (min-width:576px){
     .grillaIndex{
         display: grid;
         grid-template-columns: 2;
@@ -171,22 +165,29 @@ footer{
         display: flex;
         flex-direction: column;
     }
-
-    .grillaNosotros{
-        display: grid;
-        grid-template-columns: 2;
-        grid-template-areas: 
-        "marca      marca"
-        "barraNav   barraNav"
-        "nosotros   nosotros"
-        "fotoSole   fotoPau"
-        "footer      footer";
+    .tituloTodo:hover{
+        transform: scale(2);
     }
-    .sobreNos{
-        font-size: 30px;
+    .tituloTodo{
+        transition-duration: 5s;
     }
 }
-@media screen and (min-width:780px){
+
+.grillaNosotros{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas: 
+    "marca      marca"
+    "barraNav   barraNav"
+    "nosotros   nosotros"
+    "fotoSole   fotoPau"
+    "footer      footer";
+}
+.sobreNos{
+    font-size: 30px;
+    }
+
+@media screen and (min-width:768px){
     .grillaIndex{
         display: grid;
         grid-template-columns: 3;
@@ -280,7 +281,11 @@ p{
 .grillaContacto{
     font-family: 'Amatic SC', cursive;
     background-color: #FEEDA5; 
+    padding: 20px;
+    font-size: 25px
 }
+
+/***
 .formContacto{
     border: solid #77C1F7 5px;
     padding: 20px;
