@@ -25,43 +25,51 @@ font-family: 'Chelsea Market', cursive;
     "marca"
     "barraNav"
     "todo"
+    "fotoTodo"
     "pinata"
     "deco"
     "mas"
     "footer";
     gap: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .marca{
     grid-area: marca;
     font-family: 'Chelsea Market', cursive;
-    font-size: 20px;
+    font-size: 10px;
     text-align: center;
     padding: 20px 0px 20px 0px;
 }
 .barraNav{
     background-color: #F18BD6;
     font-family: 'Amatic SC', cursive;
-    font-size: 20px;
-    padding: 5px 120px 5px 120px;
+    font-size: 30px;
+    padding: 5px 5px 5px 5px;
     grid-area: barraNav;
 }
 ul{
     list-style: none;
     text-align: center;
 }
-li{
-    display: inline-block;
-}
+
 a{
     text-decoration: none;
 }
 .todo{
-    color: #77C1F7;
-    font-size: 30px;
+    background-color: #77C1F7;
     text-align: center;
     grid-area: todo;
+    width: 299px;
+}
+.tituloTodo{
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+}
+.fotoTodo{
+    grid-area: fotoTodo;
 }
 .pinata{
     grid-area: pinata;    
@@ -77,34 +85,22 @@ footer{
     text-align: center;
     padding: 10px;
     grid-area: footer;
+    font-family: 'Chelsea Market', cursive;
 }
-.seguinos:hover{
-    transform: scale(2);
-    transition-duration: 2s;
-}
-.fotoPinata:hover{
-    transform:translate(10px, 10px)
+.seguinos{
+    font-size: 10px;
 }
 .fotoPinata{
     border: solid;
     border-color: #77C1F7;
-    transition-duration: 2s;
-}
-.fotoDeco:hover{
-    transform:translate(10px, 10px)
 }
 .fotoDeco{
     border: solid;
     border-color: #F18BD6;
-    transition-duration: 2s;
-}
-.muchoMas:hover{
-    transform:translate(10px, 10px)
 }
 .muchoMas{
     border: solid;
     border-color: #77C1F7;
-    transition-duration: 2s;
 }
 
 /***nosotros***/
@@ -150,43 +146,64 @@ footer{
         "marca      marca"
         "barraNav   barraNav"
         "todo       todo"
+        "fotoTodo   fotoTodo"
         "pinata     deco"
         "mas        mas"
         "footer     footer";
-    }
-    nav ul{
-        display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
     .todo{
-        font-size: 40px;
+        font-size: 30px;
+        width: 570px;
+    }
+    .tituloTodo{
+        font-size: 60px;
     }
     .pinata .deco .mas{
         display: flex;
         flex-direction: column;
     }
     .tituloTodo:hover{
-        transform: scale(2);
+        transform: scale(1,2);
     }
     .tituloTodo{
         transition-duration: 5s;
+    }   
+    .fotoPinata:hover{
+        transform:translate(10px, 10px)
+    }
+    .fotoPinata{
+        transition-duration: 2s;
+    }
+    .fotoDeco:hover{
+        transform:translate(10px, 10px)
+    }
+    .fotoDeco{
+        transition-duration: 2s;
+    }
+    .muchoMas:hover{
+        transform:translate(10px, 10px)
+    }
+    .muchoMas{
+        transition-duration: 2s;
+    }*/
+    .seguinos{
+        font-size: 20px;
+    }
+    .grillaNosotros{
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-areas: 
+        "marca      marca"
+        "barraNav   barraNav"
+        "nosotros   nosotros"
+        "fotoSole   fotoPau"
+        "footer     footer";
+    }
+    .sobreNos{
+        font-size: 25px;
     }
 }
-
-.grillaNosotros{
-    display: grid;
-    grid-template-columns: 2;
-    grid-template-areas: 
-    "marca      marca"
-    "barraNav   barraNav"
-    "nosotros   nosotros"
-    "fotoSole   fotoPau"
-    "footer      footer";
-}
-.sobreNos{
-    font-size: 30px;
-    }
-
 @media screen and (min-width:768px){
     .grillaIndex{
         display: grid;
@@ -195,11 +212,13 @@ footer{
         "marca      marca     marca"
         "barraNav   barraNav  barraNav"
         "todo       todo      todo"
+        "fotoTodo   fotoTodo  fotoTodo"
         "pinata     deco      mas"
         "footer     footer    footer";
     }
     .todo{
-        font-size: 50px;
+        font-size: 30px;
+        width: 700px;
     }
     .grillaNosotros{
         display: grid;
@@ -213,7 +232,7 @@ footer{
         gap: 10px;
     }
     .sobreNos{
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -283,36 +302,4 @@ p{
     background-color: #FEEDA5; 
     padding: 20px;
     font-size: 25px
-}
-
-/***
-.formContacto{
-    border: solid #77C1F7 5px;
-    padding: 20px;
-    font-size: 35px;
-    margin: 10px 300px 10px 300px;
-    font-family: 'Amatic SC', cursive;
-}
-.pDeContacto{
-    text-align: left;    
-}
-.opcionesForm{
-    padding-left: 30px;
-    font-size: 25px;
-}
-#lugar{
-    padding-left: 30px;
-}
-textarea{
-    font-size: 15px;
-    margin-left: 30px;
-}
-
-/***footer***/
-
-footer{
-    background-color: #F18BD6;
-    font-family: 'Chelsea Market', cursive;
-    text-align: center;
-    padding: 30px;
 }

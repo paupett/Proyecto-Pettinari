@@ -13,7 +13,7 @@
     <div class="marca">
         <h1>PAPER CRAFTS</h1>
     </div>  
-    <div class="container fluid barraNav">
+    <div class="container fluid barraNav d-flex justify-content-around">
       <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,6 @@
         </div>
       </nav>
     </div> 
-    <main>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -58,7 +57,6 @@
             <input type="email" class="form-control" id="inputEmail3">
           </div>
         </div>
-        
         <fieldset class="row mb-3">
           <legend class="col-form-label col-sm-2 pt-0">Tipo de evento</legend>
           <div class="col-sm-10">
@@ -90,69 +88,19 @@
               <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
               <label for="floatingTextarea">cuál?</label>
             </div>
-
             </div>
           </div>
         </fieldset>
-        
-        <div class="form-floating">
+                <div class="form-floating">
           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
           <label for="floatingTextarea2">Mensaje</label>
-        </div>
-        
+        </div>        
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
-    <!-- formulario de contacto -->
-    <!--<section>
-      <article class="formContacto">
-        <form action="#">
-          <label for="nombre">Nombre y Apellido</label>
-          <input type="text" name="nombre"><br>
-          <label for="email">E-mail:
-            <input type="email" placeholder="aaa@gmail.com" name="email"><br>
-          </label>
-          <label for="mensaje"> Mensaje:<br>
-            <textarea name="mensaje" placeholder="Me gustaría pedir un presupuesto..."></textarea>
-          </label> <br>           
-            <div><p class="pDeContacto">Tipo de evento:</p>
-            <section class="opcionesForm">
-              <div>Cumpleaños infantil
-                <input type="radio" name="lado" value="cumpleaños infantil">
-              </div>
-              <div>Cumpleaños adulto
-                <input type="radio" name="lado" value="cumpleaños adulto">
-              </div>
-              <div>Corporativo
-                <input type="radio" name="lado" value="corporativo">
-              </div>
-              <div>Otro
-                <input type="radio" name="lado" value="Otro"><br>
-                <textarea name="otro" placeholder="cuál?"></textarea>                       
-              </div>  
-            </section>
-            
-          <p class="pDeContacto">Dónde se realizará el evento?</p>
-            <div class="opcionesForm">
-              <select name="lugar" id="lugar"> 
-                <option value="caba">CABA</option>
-                <option value="gba n">GBA Norte</option>
-                <option value="gba s">GBA Sur</option>
-                <option value="gba o">GBA Oeste</option>
-              </select>
-            </div>              
-          <div>Queres recibir info sobre nosotros?
-          <input type="checkbox" name="acepta" value="1"></div>
-          <input type="submit" value="Enviar">
-          <input type="reset" value="Borrar">
-        </form>
-      </article>
-    </section>
-    cierre de form contacto -->
-    </main>
     <footer>
       <div>
-        <h4>Seguinos en nuestras redes sociales</h4> 
+        <h4 class="seguinos">Seguinos en nuestras redes sociales</h4> 
           <a href="https://www.facebook.com/" target="_blank"></a>
           <a href="https://www.instagram.com/" target="_blank"></a>
       </div>
