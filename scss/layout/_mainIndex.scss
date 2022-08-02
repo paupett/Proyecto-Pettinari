@@ -1,0 +1,146 @@
+.grillaIndex{
+    font-family: 'Amatic SC', cursive;
+    background-color: #FEEDA5; 
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-areas: 
+    "marca"
+    "barraNav"
+    "todo"
+    "fotoTodo"
+    "pinata"
+    "deco"
+    "mas"
+    "footer";
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    
+    .todo{
+        background-color: #77C1F7;
+        text-align: center;
+        grid-area: todo;
+        width: 299px;
+    
+        .tituloTodo{
+            font-size: 40px;
+            color: white;
+            font-weight: bolder;
+        }
+    }
+
+    .fotoTodo{
+        grid-area: fotoTodo;
+    }
+
+    .pinata{
+        grid-area: pinata;
+
+        .fotoPinata{
+            border: solid;
+            border-color: #77C1F7;
+        }
+    }
+
+    .deco{
+        grid-area: deco;
+
+        .fotoDeco{
+            border: solid;
+            border-color: #F18BD6;
+        }
+    }
+    .mas{
+        grid-area: mas;
+
+        .muchoMas{
+            border: solid;
+            border-color: #77C1F7;
+        }
+    }
+
+}
+
+/***responsive***/
+
+@media screen and (min-width:576px){
+    .grillaIndex{
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-areas: 
+        "marca      marca"
+        "barraNav   barraNav"
+        "todo       todo"
+        "fotoTodo   fotoTodo"
+        "pinata     deco"
+        "mas        mas"
+        "footer     footer";
+        justify-content: center;
+
+        .todo{
+            font-size: 30px;
+            width: 570px;
+            
+            .tituloTodo{
+                font-size: 60px;
+                transition-duration: 5s;
+
+                &:hover{
+                    transform: scale(1,2);
+                }
+            }
+        }
+
+        .pinata,
+        .deco,
+        .mas{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fotoPinata{
+            transition-duration: 2s;
+    
+            &:hover{
+                transform:translate(10px, 10px)
+            }
+        }
+        
+        .fotoDeco{
+            transition-duration: 2s;
+            
+            &:hover{
+                transform:translate(10px, 10px)
+            }
+        }
+        
+        .muchoMas{
+            transition-duration: 2s;
+    
+            &:hover{
+                transform:translate(10px, 10px)
+            }
+        }
+
+    }
+    
+}
+@media screen and (min-width:768px){
+    .grillaIndex{
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-areas: 
+        "marca      marca     marca"
+        "barraNav   barraNav  barraNav"
+        "todo       todo      todo"
+        "fotoTodo   fotoTodo  fotoTodo"
+        "pinata     deco      mas"
+        "footer     footer    footer";
+
+        .todo{
+            font-size: 30px;
+            width: 700px;
+        }
+    }
+
+}

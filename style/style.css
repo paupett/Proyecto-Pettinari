@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Chelsea+Market&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.marca {
+  grid-area: marca;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 10px;
+  text-align: center;
+  padding: 20px 0px 20px 0px; }
+
+.barraNav {
+  background-color: #F18BD6;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  padding: 5px 5px 5px 5px;
+  grid-area: barraNav; }
+  .barraNav ul {
+    list-style: none;
+    text-align: center; }
+    .barraNav ul a {
+      text-decoration: none; }
+
+footer {
+  background-color: #F18BD6;
+  text-align: center;
+  padding: 10px;
+  grid-area: footer;
+  font-family: 'Chelsea Market', cursive; }
+  footer .seguinos {
+    font-size: 10px; }
+
+/***responsive***/
+@media screen and (min-width: 576px) {
+  .seguinos {
+    font-size: 20px; } }
+
+.grillaIndex {
+  font-family: 'Amatic SC', cursive;
+  background-color: #FEEDA5;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-areas: "marca" "barraNav" "todo" "fotoTodo" "pinata" "deco" "mas" "footer";
+  gap: 10px;
+  text-align: center;
+  justify-content: center; }
+  .grillaIndex .todo {
+    background-color: #77C1F7;
+    text-align: center;
+    grid-area: todo;
+    width: 299px; }
+    .grillaIndex .todo .tituloTodo {
+      font-size: 40px;
+      color: white;
+      font-weight: bolder; }
+  .grillaIndex .fotoTodo {
+    grid-area: fotoTodo; }
+  .grillaIndex .pinata {
+    grid-area: pinata; }
+    .grillaIndex .pinata .fotoPinata {
+      border: solid;
+      border-color: #77C1F7; }
+  .grillaIndex .deco {
+    grid-area: deco; }
+    .grillaIndex .deco .fotoDeco {
+      border: solid;
+      border-color: #F18BD6; }
+  .grillaIndex .mas {
+    grid-area: mas; }
+    .grillaIndex .mas .muchoMas {
+      border: solid;
+      border-color: #77C1F7; }
+
+/***responsive***/
+@media screen and (min-width: 576px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas: "marca      marca" "barraNav   barraNav" "todo       todo" "fotoTodo   fotoTodo" "pinata     deco" "mas        mas" "footer     footer";
+    justify-content: center; }
+    .grillaIndex .todo {
+      font-size: 30px;
+      width: 570px; }
+      .grillaIndex .todo .tituloTodo {
+        font-size: 60px;
+        transition-duration: 5s; }
+        .grillaIndex .todo .tituloTodo:hover {
+          transform: scale(1, 2); }
+    .grillaIndex .pinata,
+    .grillaIndex .deco,
+    .grillaIndex .mas {
+      display: flex;
+      flex-direction: column; }
+    .grillaIndex .fotoPinata {
+      transition-duration: 2s; }
+      .grillaIndex .fotoPinata:hover {
+        transform: translate(10px, 10px); }
+    .grillaIndex .fotoDeco {
+      transition-duration: 2s; }
+      .grillaIndex .fotoDeco:hover {
+        transform: translate(10px, 10px); }
+    .grillaIndex .muchoMas {
+      transition-duration: 2s; }
+      .grillaIndex .muchoMas:hover {
+        transform: translate(10px, 10px); } }
+
+@media screen and (min-width: 768px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-areas: "marca      marca     marca" "barraNav   barraNav  barraNav" "todo       todo      todo" "fotoTodo   fotoTodo  fotoTodo" "pinata     deco      mas" "footer     footer    footer"; }
+    .grillaIndex .todo {
+      font-size: 30px;
+      width: 700px; } }
+
+/*
+colores
+#FEEDA5 #F18BD6 #77C1F7
+fuentes
+font-family: 'Amatic SC', cursive;
+font-family: 'Chelsea Market', cursive;
+**/

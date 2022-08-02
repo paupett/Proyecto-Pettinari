@@ -1,0 +1,19 @@
+footer{
+    background-color: #F18BD6;
+    text-align: center;
+    padding: 10px;
+    grid-area: footer;
+    font-family: 'Chelsea Market', cursive;
+
+    .seguinos{
+        font-size: 10px;
+    }
+}
+
+/***responsive***/
+
+@media screen and (min-width:576px){
+    .seguinos{
+        font-size: 20px;
+    }
+}
