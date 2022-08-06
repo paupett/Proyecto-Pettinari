@@ -115,6 +115,44 @@ footer {
       font-size: 30px;
       width: 700px; } }
 
+.grillaNosotros {
+  font-family: 'Amatic SC', cursive;
+  background-color: #FEEDA5;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-areas: "marca" "barraNav" "nosotros" "fotoSole" "fotoPau" "footer";
+  gap: 10px;
+  text-align: center; }
+  .grillaNosotros .nosotros {
+    grid-area: nosotros; }
+    .grillaNosotros .nosotros .syp {
+      color: #77C1F7;
+      font-size: 70px; }
+    .grillaNosotros .nosotros .sobreNos {
+      font-size: 25px; }
+  .grillaNosotros .fotoSole {
+    grid-area: fotoSole; }
+  .grillaNosotros .fotoPau {
+    grid-area: fotoPau; }
+
+/***responsive***/
+@media screen and (min-width: 576px) {
+  .grillaNosotros {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas: "marca      marca" "barraNav   barraNav" "nosotros   nosotros" "fotoSole   fotoPau" "footer     footer"; }
+    .grillaNosotros .sobreNos {
+      font-size: 25px; } }
+
+@media screen and (min-width: 768px) {
+  .grillaNosotros {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "marca      marca" "barraNav   barraNav" "nosotros   fotoPau" "nosotros   fotoSole" "footer      footer";
+    gap: 10px; }
+    .grillaNosotros .sobreNos {
+      font-size: 30px; } }
+
 /*
 colores
 #FEEDA5 #F18BD6 #77C1F7
