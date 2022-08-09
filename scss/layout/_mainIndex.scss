@@ -1,6 +1,6 @@
 .grillaIndex{
     font-family: 'Amatic SC', cursive;
-    background-color: #FEEDA5; 
+    background-color: $colorFondo; 
     display: grid;
     grid-template-columns: 1;
     grid-template-areas: 
@@ -36,10 +36,15 @@
     .pinata{
         grid-area: pinata;
 
-        .fotoPinata{
+        /*.fotoPinata{
             border: solid;
             border-color: #77C1F7;
-        }
+        }*/
+    }
+
+    .fotoPinata{
+        border: solid;
+        border-color: #77C1F7;
     }
 
     .deco{
@@ -54,11 +59,9 @@
         grid-area: mas;
 
         .muchoMas{
-            border: solid;
-            border-color: #77C1F7;
+            @extend .fotoPinata;
         }
     }
-
 }
 
 /***responsive***/

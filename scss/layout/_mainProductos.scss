@@ -1,0 +1,41 @@
+
+.grillaProductos{
+    font-family: 'Amatic SC', cursive;
+    background-color: $colorFondo; 
+    
+    .prods{
+        padding: 30px;
+        margin: 40px;
+
+        .tituloProds{
+            background-color: #77C1F7;
+            color: white;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .fotoProd{
+            width: 230px;
+            height: 250px;
+            padding: 20px;
+        }
+    }
+
+    .personalizados{
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+        border: solid #77C1F7;
+    
+        .tituloPersonalizados{
+            font-size: 50px;
+            color: #F18BD6;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .pprod{
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+}

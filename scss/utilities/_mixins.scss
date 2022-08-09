@@ -1,0 +1,6 @@
+@mixin Secciones-galeria ($back, $color, $text-align, $font-size){
+    background-color:$back;
+    color:$color;
+    text-align: $text-align;
+    font-size: $font-size;
+}

@@ -1,9 +1,14 @@
+@import "./utilities/_variables";
+@import "./utilities/mixins";
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Chelsea+Market&display=swap');
 @import "./layout/reset";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/mainIndex";
 @import "./layout/mainNosotros";
+@import "./layout/mainContacto";
+@import "./layout/mainGaleria";
+@import "./layout/mainProductos";
 
 /*
 colores
