@@ -2,39 +2,170 @@
 .grillaProductos{
     font-family: 'Amatic SC', cursive;
     background-color: $colorFondo; 
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-areas:
+    "marca"
+    "barraNav"
+    "prodsPinatas"
+    "prodsGuir"
+    "prodsTopp"
+    "prodsDeco"
+    "prodsCarnav"
+    "prodsBolsa"
+    "personalizados"
+    "footer";
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
     
-    .prods{
-        padding: 30px;
-        margin: 40px;
+    .prodsPinatas{
+        grid-area: prodsPinatas;
 
-        .tituloProds{
+        .tituloPinata{
             background-color: #77C1F7;
             color: white;
             margin-left: 15px;
             margin-right: 15px;
         }
-        .fotoProd{
+        .fotoProdPina1{
             width: 230px;
             height: 250px;
             padding: 20px;
         }
+        .fotoProdPina2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdPina3{
+            @extend .fotoProdPina1;
+        }
+        .pprodPina{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    
+    .prodsGuir{
+        @extend .prodsPinatas;
+        grid-area: prodsGuir;
+    
+        .tituloGuir{
+            @extend .tituloPinata;
+        }
+        .fotoProdGuir1{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdGuir2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdGuir3{
+            @extend .fotoProdPina1;
+        }
+        .pprodGuir{
+            @extend .pprodPina;
+        }
+    }
+    
+    .prodsTopp{
+        @extend .prodsPinatas;
+        grid-area: prodsTopp;
+    
+        .tituloTopp{
+            @extend .tituloPinata;
+        }
+        .fotoProdTopp1{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdTopp2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdTopp3{
+            @extend .fotoProdPina1;
+        }
+        .pprodTopp{
+            @extend .pprodPina;
+        }
+    }
+
+    .prodsDeco{
+        @extend .prodsPinatas;
+        grid-area: prodsDeco;
+    
+        .tituloDeco{
+            @extend .tituloPinata;
+        }
+        .fotoProdDeco1{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdDeco2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdDeco3{
+            @extend .fotoProdPina1;
+        }
+        .pprodDeco{
+            @extend .pprodPina;
+        }
+    }
+
+    .prodsCarnav{
+        @extend .prodsPinatas;
+        grid-area: prodsCarnav;
+    
+        .tituloCarnav{
+            @extend .tituloPinata;
+        }
+        .fotoProdCar1{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdCar2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdCar3{
+            @extend .fotoProdPina1;
+        }
+        .pprodCar{
+            @extend .pprodPina;
+        }
+    }
+    
+    .prodsBolsa{
+        @extend .prodsPinatas;
+        grid-area: prodsBolsa;
+    
+        .tituloBolsa{
+            @extend .tituloPinata;
+        }
+        .fotoProdBol1{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdBol2{
+            @extend .fotoProdPina1;
+        }
+        .fotoProdBol3{
+            @extend .fotoProdPina1;
+        }
+        .pprodBol{
+            @extend .pprodPina;
+        }
     }
 
     .personalizados{
-        padding: 30px;
-        margin: 20px;
+        padding: 10px;
+        margin: 10px;
         text-align: center;
         border: solid #77C1F7;
+        grid-area: personalizados;
     
         .tituloPersonalizados{
-            font-size: 50px;
+            font-size: 20px;
             color: #F18BD6;
             font-weight: bold;
             text-align: center;
         }
 
-        .pprod{
-            font-size: 35px;
+        .pprodPers{
+            font-size: 20px;
             text-align: center;
         }
     }
