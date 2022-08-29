@@ -5,18 +5,18 @@
   box-sizing: border-box; }
 
 .marca {
-  grid-area: marca;
+  /*grid-area: marca;*/
   font-family: 'Chelsea Market', cursive;
   font-size: 10px;
   text-align: center;
-  padding: 20px 0px 20px 0px; }
+  padding: 20px 0px 20px 0px;
+  background-color: #FEEDA5; }
 
 .barraNav {
   background-color: #F18BD6;
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
-  padding: 5px 5px 5px 5px;
-  grid-area: barraNav; }
+  /*grid-area: barraNav;*/ }
   .barraNav ul {
     list-style: none;
     text-align: center; }
@@ -30,7 +30,10 @@ footer {
   grid-area: footer;
   font-family: 'Chelsea Market', cursive; }
   footer .seguinos {
-    font-size: 10px; }
+    font-size: 15px; }
+  footer .fb, footer .ig {
+    width: 30px;
+    height: 30px; }
 
 /***responsive***/
 @media screen and (min-width: 576px) {
@@ -42,7 +45,7 @@ footer {
   background-color: #FEEDA5;
   display: grid;
   grid-template-columns: 1;
-  grid-template-areas: "marca" "barraNav" "todo" "fotoTodo" "pinata" "deco" "mas" "footer";
+  grid-template-areas: "todo" "fotoTodo" "pinata" "deco" "mas";
   gap: 10px;
   text-align: center;
   justify-content: center; }
@@ -50,7 +53,8 @@ footer {
     background-color: #77C1F7;
     text-align: center;
     grid-area: todo;
-    width: 299px; }
+    width: 299px;
+    margin-top: 10px; }
     .grillaIndex .todo .tituloTodo {
       font-size: 40px;
       color: white;
@@ -59,23 +63,38 @@ footer {
     grid-area: fotoTodo; }
   .grillaIndex .pinata {
     grid-area: pinata; }
-  .grillaIndex .fotoPinata, .grillaIndex .mas .muchoMas {
-    border: solid;
-    border-color: #77C1F7; }
+    .grillaIndex .pinata .fotoPinata {
+      border: solid;
+      border-color: #77C1F7;
+      border-style: dotted;
+      border-width: 4px; }
+    .grillaIndex .pinata .textoIndex {
+      font-size: 30px; }
   .grillaIndex .deco {
     grid-area: deco; }
     .grillaIndex .deco .fotoDeco {
       border: solid;
-      border-color: #F18BD6; }
+      border-color: #F18BD6;
+      border-style: double;
+      border-width: 4px; }
+    .grillaIndex .deco .textoIndex {
+      font-size: 30px; }
   .grillaIndex .mas {
     grid-area: mas; }
+    .grillaIndex .mas .muchoMas {
+      border: solid;
+      border-color: #77c1f7;
+      border-style: dashed;
+      border-width: 4px; }
+    .grillaIndex .mas .textoIndex {
+      font-size: 30px; }
 
 /***responsive***/
 @media screen and (min-width: 576px) {
   .grillaIndex {
     display: grid;
     grid-template-columns: 2;
-    grid-template-areas: "marca      marca" "barraNav   barraNav" "todo       todo" "fotoTodo   fotoTodo" "pinata     deco" "mas        mas" "footer     footer";
+    grid-template-areas: "todo       todo" "fotoTodo   fotoTodo" "pinata     deco" "mas        mas";
     justify-content: center; }
     .grillaIndex .todo {
       font-size: 30px;
@@ -85,14 +104,9 @@ footer {
         transition-duration: 5s; }
         .grillaIndex .todo .tituloTodo:hover {
           transform: scale(1, 2); }
-    .grillaIndex .pinata,
-    .grillaIndex .deco,
-    .grillaIndex .mas {
-      display: flex;
-      flex-direction: column; }
-    .grillaIndex .fotoPinata, .grillaIndex .mas .muchoMas {
+    .grillaIndex .fotoPinata {
       transition-duration: 2s; }
-      .grillaIndex .fotoPinata:hover, .grillaIndex .mas .muchoMas:hover {
+      .grillaIndex .fotoPinata:hover {
         transform: translate(10px, 10px); }
     .grillaIndex .fotoDeco {
       transition-duration: 2s; }
@@ -107,7 +121,7 @@ footer {
   .grillaIndex {
     display: grid;
     grid-template-columns: 3;
-    grid-template-areas: "marca      marca     marca" "barraNav   barraNav  barraNav" "todo       todo      todo" "fotoTodo   fotoTodo  fotoTodo" "pinata     deco      mas" "footer     footer    footer"; }
+    grid-template-areas: "todo       todo      todo" "fotoTodo   fotoTodo  fotoTodo" "pinata     deco      mas"; }
     .grillaIndex .todo {
       font-size: 30px;
       width: 700px; } }
@@ -117,7 +131,7 @@ footer {
   background-color: #FEEDA5;
   display: grid;
   grid-template-columns: 1;
-  grid-template-areas: "marca" "barraNav" "nosotros" "fotoSole" "fotoPau" "footer";
+  grid-template-areas: "nosotros" "fotoSole" "fotoPau" "footer";
   gap: 10px;
   text-align: center; }
   .grillaNosotros .nosotros {
@@ -147,62 +161,63 @@ footer {
     grid-template-columns: 3fr 2fr;
     grid-template-areas: "marca      marca" "barraNav   barraNav" "nosotros   fotoPau" "nosotros   fotoSole" "footer      footer";
     gap: 10px; }
-    .grillaNosotros .sobreNos {
-      font-size: 30px; } }
+    .grillaNosotros .nosotros {
+      margin-left: 100px; }
+      .grillaNosotros .nosotros .sobreNos {
+        font-size: 30px; } }
 
 .grillaContacto {
   font-family: 'Amatic SC', cursive;
   background-color: #FEEDA5;
   padding: 20px;
   font-size: 25px; }
+  .grillaContacto .nyp {
+    margin-bottom: 10px; }
+  .grillaContacto .enviar {
+    margin-top: 30px;
+    background-color: #F18BD6;
+    border-color: #F18BD6;
+    font-size: 25px;
+    font-weight: bold; }
 
 .grillaGaleria {
   font-family: 'Amatic SC', cursive;
-  background-color: #FEEDA5; }
-  .grillaGaleria .tituloAnimales {
-    background-color: #77C1F7;
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    margin-left: 15px;
-    margin-right: 15px; }
-  .grillaGaleria .tutuloColores {
-    background-color: #F18BD6;
-    color: #FEEDA5;
-    text-align: end;
-    font-size: 50px; }
-  .grillaGaleria .tituloDinos {
-    background-color: #77C1F7;
-    color: white;
-    text-align: first;
-    font-size: 50px; }
-  .grillaGaleria .fotoGale {
-    width: 230px;
-    height: 250px;
-    padding: 20px; }
+  background-color: #FEEDA5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px; }
+  .grillaGaleria .galeria {
+    padding: 10px; }
+    .grillaGaleria .galeria .fotoGale {
+      margin-top: 10px;
+      width: 100%; }
 
 .grillaProductos {
   font-family: 'Amatic SC', cursive;
   background-color: #FEEDA5;
   display: grid;
   grid-template-columns: 1;
-  grid-template-areas: "marca" "barraNav" "prodsPinatas" "prodsGuir" "prodsTopp" "prodsDeco" "prodsCarnav" "prodsBolsa" "personalizados" "footer";
+  grid-template-areas: "prodsPinatas" "prodsGuir" "prodsTopp" "prodsDeco" "prodsCarnav" "prodsBolsa" "personalizados" "footer";
   gap: 10px;
   text-align: center;
   justify-content: center; }
   .grillaProductos .prodsPinatas, .grillaProductos .prodsGuir, .grillaProductos .prodsTopp, .grillaProductos .prodsDeco, .grillaProductos .prodsCarnav, .grillaProductos .prodsBolsa {
-    grid-area: prodsPinatas; }
+    grid-area: prodsPinatas;
+    margin-top: 20px; }
     .grillaProductos .prodsPinatas .tituloPinata, .grillaProductos .prodsGuir .tituloPinata, .grillaProductos .prodsTopp .tituloPinata, .grillaProductos .prodsDeco .tituloPinata, .grillaProductos .prodsCarnav .tituloPinata, .grillaProductos .prodsBolsa .tituloPinata, .grillaProductos .prodsGuir .tituloGuir, .grillaProductos .prodsTopp .tituloTopp, .grillaProductos .prodsDeco .tituloDeco, .grillaProductos .prodsCarnav .tituloCarnav, .grillaProductos .prodsBolsa .tituloBolsa {
       background-color: #77C1F7;
       color: white;
       margin-left: 15px;
-      margin-right: 15px; }
+      margin-right: 15px;
+      margin-top: 15;
+      font-size: 35px; }
     .grillaProductos .prodsPinatas .fotoProdPina1, .grillaProductos .prodsGuir .fotoProdPina1, .grillaProductos .prodsTopp .fotoProdPina1, .grillaProductos .prodsDeco .fotoProdPina1, .grillaProductos .prodsCarnav .fotoProdPina1, .grillaProductos .prodsBolsa .fotoProdPina1, .grillaProductos .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .prodsPinatas .fotoProdPina2, .grillaProductos .prodsPinatas .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .prodsPinatas .fotoProdPina2, .grillaProductos .prodsPinatas .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .prodsPinatas .fotoProdPina2, .grillaProductos .prodsPinatas .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdPina2, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdPina2, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .prodsGuir .fotoProdPina2, .grillaProductos .prodsGuir .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .prodsGuir .fotoProdPina2, .grillaProductos .prodsGuir .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .prodsGuir .fotoProdPina2, .grillaProductos .prodsGuir .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .prodsGuir .fotoProdPina2, .grillaProductos .prodsGuir .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .prodsGuir .fotoProdPina2, .grillaProductos .prodsGuir .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .prodsTopp .fotoProdPina2, .grillaProductos .prodsTopp .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .prodsTopp .fotoProdPina2, .grillaProductos .prodsTopp .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .prodsTopp .fotoProdPina2, .grillaProductos .prodsTopp .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .prodsTopp .fotoProdPina2, .grillaProductos .prodsTopp .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .prodsTopp .fotoProdPina2, .grillaProductos .prodsTopp .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .prodsDeco .fotoProdPina2, .grillaProductos .prodsDeco .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .prodsDeco .fotoProdPina2, .grillaProductos .prodsDeco .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .prodsDeco .fotoProdPina2, .grillaProductos .prodsDeco .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .prodsDeco .fotoProdPina2, .grillaProductos .prodsDeco .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .prodsDeco .fotoProdPina2, .grillaProductos .prodsDeco .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdPina2, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .prodsCarnav .fotoProdPina2, .grillaProductos .prodsCarnav .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .prodsCarnav .fotoProdPina2, .grillaProductos .prodsCarnav .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .prodsCarnav .fotoProdPina2, .grillaProductos .prodsCarnav .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdPina2, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdPina2, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdPina2, .grillaProductos .prodsGuir .prodsBolsa .fotoProdPina2, .grillaProductos .prodsBolsa .prodsGuir .fotoProdPina2, .grillaProductos .prodsTopp .prodsBolsa .fotoProdPina2, .grillaProductos .prodsBolsa .prodsTopp .fotoProdPina2, .grillaProductos .prodsDeco .prodsBolsa .fotoProdPina2, .grillaProductos .prodsBolsa .prodsDeco .fotoProdPina2, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdPina2, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdPina2, .grillaProductos .prodsBolsa .fotoProdPina2, .grillaProductos .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .prodsPinatas .fotoProdPina3, .grillaProductos .prodsPinatas .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .prodsPinatas .fotoProdPina3, .grillaProductos .prodsPinatas .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .prodsPinatas .fotoProdPina3, .grillaProductos .prodsPinatas .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdPina3, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdPina3, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsGuir .fotoProdPina3, .grillaProductos .prodsGuir .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .prodsGuir .fotoProdPina3, .grillaProductos .prodsGuir .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .prodsGuir .fotoProdPina3, .grillaProductos .prodsGuir .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .prodsGuir .fotoProdPina3, .grillaProductos .prodsGuir .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .prodsGuir .fotoProdPina3, .grillaProductos .prodsGuir .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsTopp .fotoProdPina3, .grillaProductos .prodsTopp .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .prodsTopp .fotoProdPina3, .grillaProductos .prodsTopp .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .prodsTopp .fotoProdPina3, .grillaProductos .prodsTopp .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .prodsTopp .fotoProdPina3, .grillaProductos .prodsTopp .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .prodsTopp .fotoProdPina3, .grillaProductos .prodsTopp .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsDeco .fotoProdPina3, .grillaProductos .prodsDeco .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .prodsDeco .fotoProdPina3, .grillaProductos .prodsDeco .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .prodsDeco .fotoProdPina3, .grillaProductos .prodsDeco .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .prodsDeco .fotoProdPina3, .grillaProductos .prodsDeco .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .prodsDeco .fotoProdPina3, .grillaProductos .prodsDeco .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdPina3, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .prodsCarnav .fotoProdPina3, .grillaProductos .prodsCarnav .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .prodsCarnav .fotoProdPina3, .grillaProductos .prodsCarnav .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .prodsCarnav .fotoProdPina3, .grillaProductos .prodsCarnav .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdPina3, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdPina3, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdPina3, .grillaProductos .prodsGuir .prodsBolsa .fotoProdPina3, .grillaProductos .prodsBolsa .prodsGuir .fotoProdPina3, .grillaProductos .prodsTopp .prodsBolsa .fotoProdPina3, .grillaProductos .prodsBolsa .prodsTopp .fotoProdPina3, .grillaProductos .prodsDeco .prodsBolsa .fotoProdPina3, .grillaProductos .prodsBolsa .prodsDeco .fotoProdPina3, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdPina3, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdPina3, .grillaProductos .prodsBolsa .fotoProdPina3, .grillaProductos .prodsPinatas .prodsGuir .fotoProdGuir1, .grillaProductos .prodsGuir .prodsPinatas .fotoProdGuir1, .grillaProductos .prodsGuir .fotoProdGuir1, .grillaProductos .prodsTopp .prodsGuir .fotoProdGuir1, .grillaProductos .prodsGuir .prodsTopp .fotoProdGuir1, .grillaProductos .prodsDeco .prodsGuir .fotoProdGuir1, .grillaProductos .prodsGuir .prodsDeco .fotoProdGuir1, .grillaProductos .prodsCarnav .prodsGuir .fotoProdGuir1, .grillaProductos .prodsGuir .prodsCarnav .fotoProdGuir1, .grillaProductos .prodsBolsa .prodsGuir .fotoProdGuir1, .grillaProductos .prodsGuir .prodsBolsa .fotoProdGuir1, .grillaProductos .prodsPinatas .prodsGuir .fotoProdGuir2, .grillaProductos .prodsGuir .prodsPinatas .fotoProdGuir2, .grillaProductos .prodsGuir .fotoProdGuir2, .grillaProductos .prodsTopp .prodsGuir .fotoProdGuir2, .grillaProductos .prodsGuir .prodsTopp .fotoProdGuir2, .grillaProductos .prodsDeco .prodsGuir .fotoProdGuir2, .grillaProductos .prodsGuir .prodsDeco .fotoProdGuir2, .grillaProductos .prodsCarnav .prodsGuir .fotoProdGuir2, .grillaProductos .prodsGuir .prodsCarnav .fotoProdGuir2, .grillaProductos .prodsBolsa .prodsGuir .fotoProdGuir2, .grillaProductos .prodsGuir .prodsBolsa .fotoProdGuir2, .grillaProductos .prodsPinatas .prodsGuir .fotoProdGuir3, .grillaProductos .prodsGuir .prodsPinatas .fotoProdGuir3, .grillaProductos .prodsGuir .fotoProdGuir3, .grillaProductos .prodsTopp .prodsGuir .fotoProdGuir3, .grillaProductos .prodsGuir .prodsTopp .fotoProdGuir3, .grillaProductos .prodsDeco .prodsGuir .fotoProdGuir3, .grillaProductos .prodsGuir .prodsDeco .fotoProdGuir3, .grillaProductos .prodsCarnav .prodsGuir .fotoProdGuir3, .grillaProductos .prodsGuir .prodsCarnav .fotoProdGuir3, .grillaProductos .prodsBolsa .prodsGuir .fotoProdGuir3, .grillaProductos .prodsGuir .prodsBolsa .fotoProdGuir3, .grillaProductos .prodsPinatas .prodsTopp .fotoProdTopp1, .grillaProductos .prodsTopp .prodsPinatas .fotoProdTopp1, .grillaProductos .prodsGuir .prodsTopp .fotoProdTopp1, .grillaProductos .prodsTopp .prodsGuir .fotoProdTopp1, .grillaProductos .prodsTopp .fotoProdTopp1, .grillaProductos .prodsDeco .prodsTopp .fotoProdTopp1, .grillaProductos .prodsTopp .prodsDeco .fotoProdTopp1, .grillaProductos .prodsCarnav .prodsTopp .fotoProdTopp1, .grillaProductos .prodsTopp .prodsCarnav .fotoProdTopp1, .grillaProductos .prodsBolsa .prodsTopp .fotoProdTopp1, .grillaProductos .prodsTopp .prodsBolsa .fotoProdTopp1, .grillaProductos .prodsPinatas .prodsTopp .fotoProdTopp2, .grillaProductos .prodsTopp .prodsPinatas .fotoProdTopp2, .grillaProductos .prodsGuir .prodsTopp .fotoProdTopp2, .grillaProductos .prodsTopp .prodsGuir .fotoProdTopp2, .grillaProductos .prodsTopp .fotoProdTopp2, .grillaProductos .prodsDeco .prodsTopp .fotoProdTopp2, .grillaProductos .prodsTopp .prodsDeco .fotoProdTopp2, .grillaProductos .prodsCarnav .prodsTopp .fotoProdTopp2, .grillaProductos .prodsTopp .prodsCarnav .fotoProdTopp2, .grillaProductos .prodsBolsa .prodsTopp .fotoProdTopp2, .grillaProductos .prodsTopp .prodsBolsa .fotoProdTopp2, .grillaProductos .prodsPinatas .prodsTopp .fotoProdTopp3, .grillaProductos .prodsTopp .prodsPinatas .fotoProdTopp3, .grillaProductos .prodsGuir .prodsTopp .fotoProdTopp3, .grillaProductos .prodsTopp .prodsGuir .fotoProdTopp3, .grillaProductos .prodsTopp .fotoProdTopp3, .grillaProductos .prodsDeco .prodsTopp .fotoProdTopp3, .grillaProductos .prodsTopp .prodsDeco .fotoProdTopp3, .grillaProductos .prodsCarnav .prodsTopp .fotoProdTopp3, .grillaProductos .prodsTopp .prodsCarnav .fotoProdTopp3, .grillaProductos .prodsBolsa .prodsTopp .fotoProdTopp3, .grillaProductos .prodsTopp .prodsBolsa .fotoProdTopp3, .grillaProductos .prodsPinatas .prodsDeco .fotoProdDeco1, .grillaProductos .prodsDeco .prodsPinatas .fotoProdDeco1, .grillaProductos .prodsGuir .prodsDeco .fotoProdDeco1, .grillaProductos .prodsDeco .prodsGuir .fotoProdDeco1, .grillaProductos .prodsTopp .prodsDeco .fotoProdDeco1, .grillaProductos .prodsDeco .prodsTopp .fotoProdDeco1, .grillaProductos .prodsDeco .fotoProdDeco1, .grillaProductos .prodsCarnav .prodsDeco .fotoProdDeco1, .grillaProductos .prodsDeco .prodsCarnav .fotoProdDeco1, .grillaProductos .prodsBolsa .prodsDeco .fotoProdDeco1, .grillaProductos .prodsDeco .prodsBolsa .fotoProdDeco1, .grillaProductos .prodsPinatas .prodsDeco .fotoProdDeco2, .grillaProductos .prodsDeco .prodsPinatas .fotoProdDeco2, .grillaProductos .prodsGuir .prodsDeco .fotoProdDeco2, .grillaProductos .prodsDeco .prodsGuir .fotoProdDeco2, .grillaProductos .prodsTopp .prodsDeco .fotoProdDeco2, .grillaProductos .prodsDeco .prodsTopp .fotoProdDeco2, .grillaProductos .prodsDeco .fotoProdDeco2, .grillaProductos .prodsCarnav .prodsDeco .fotoProdDeco2, .grillaProductos .prodsDeco .prodsCarnav .fotoProdDeco2, .grillaProductos .prodsBolsa .prodsDeco .fotoProdDeco2, .grillaProductos .prodsDeco .prodsBolsa .fotoProdDeco2, .grillaProductos .prodsPinatas .prodsDeco .fotoProdDeco3, .grillaProductos .prodsDeco .prodsPinatas .fotoProdDeco3, .grillaProductos .prodsGuir .prodsDeco .fotoProdDeco3, .grillaProductos .prodsDeco .prodsGuir .fotoProdDeco3, .grillaProductos .prodsTopp .prodsDeco .fotoProdDeco3, .grillaProductos .prodsDeco .prodsTopp .fotoProdDeco3, .grillaProductos .prodsDeco .fotoProdDeco3, .grillaProductos .prodsCarnav .prodsDeco .fotoProdDeco3, .grillaProductos .prodsDeco .prodsCarnav .fotoProdDeco3, .grillaProductos .prodsBolsa .prodsDeco .fotoProdDeco3, .grillaProductos .prodsDeco .prodsBolsa .fotoProdDeco3, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdCar1, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdCar1, .grillaProductos .prodsGuir .prodsCarnav .fotoProdCar1, .grillaProductos .prodsCarnav .prodsGuir .fotoProdCar1, .grillaProductos .prodsTopp .prodsCarnav .fotoProdCar1, .grillaProductos .prodsCarnav .prodsTopp .fotoProdCar1, .grillaProductos .prodsDeco .prodsCarnav .fotoProdCar1, .grillaProductos .prodsCarnav .prodsDeco .fotoProdCar1, .grillaProductos .prodsCarnav .fotoProdCar1, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdCar1, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdCar1, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdCar2, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdCar2, .grillaProductos .prodsGuir .prodsCarnav .fotoProdCar2, .grillaProductos .prodsCarnav .prodsGuir .fotoProdCar2, .grillaProductos .prodsTopp .prodsCarnav .fotoProdCar2, .grillaProductos .prodsCarnav .prodsTopp .fotoProdCar2, .grillaProductos .prodsDeco .prodsCarnav .fotoProdCar2, .grillaProductos .prodsCarnav .prodsDeco .fotoProdCar2, .grillaProductos .prodsCarnav .fotoProdCar2, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdCar2, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdCar2, .grillaProductos .prodsPinatas .prodsCarnav .fotoProdCar3, .grillaProductos .prodsCarnav .prodsPinatas .fotoProdCar3, .grillaProductos .prodsGuir .prodsCarnav .fotoProdCar3, .grillaProductos .prodsCarnav .prodsGuir .fotoProdCar3, .grillaProductos .prodsTopp .prodsCarnav .fotoProdCar3, .grillaProductos .prodsCarnav .prodsTopp .fotoProdCar3, .grillaProductos .prodsDeco .prodsCarnav .fotoProdCar3, .grillaProductos .prodsCarnav .prodsDeco .fotoProdCar3, .grillaProductos .prodsCarnav .fotoProdCar3, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdCar3, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdCar3, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdBol1, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdBol1, .grillaProductos .prodsGuir .prodsBolsa .fotoProdBol1, .grillaProductos .prodsBolsa .prodsGuir .fotoProdBol1, .grillaProductos .prodsTopp .prodsBolsa .fotoProdBol1, .grillaProductos .prodsBolsa .prodsTopp .fotoProdBol1, .grillaProductos .prodsDeco .prodsBolsa .fotoProdBol1, .grillaProductos .prodsBolsa .prodsDeco .fotoProdBol1, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdBol1, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdBol1, .grillaProductos .prodsBolsa .fotoProdBol1, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdBol2, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdBol2, .grillaProductos .prodsGuir .prodsBolsa .fotoProdBol2, .grillaProductos .prodsBolsa .prodsGuir .fotoProdBol2, .grillaProductos .prodsTopp .prodsBolsa .fotoProdBol2, .grillaProductos .prodsBolsa .prodsTopp .fotoProdBol2, .grillaProductos .prodsDeco .prodsBolsa .fotoProdBol2, .grillaProductos .prodsBolsa .prodsDeco .fotoProdBol2, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdBol2, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdBol2, .grillaProductos .prodsBolsa .fotoProdBol2, .grillaProductos .prodsPinatas .prodsBolsa .fotoProdBol3, .grillaProductos .prodsBolsa .prodsPinatas .fotoProdBol3, .grillaProductos .prodsGuir .prodsBolsa .fotoProdBol3, .grillaProductos .prodsBolsa .prodsGuir .fotoProdBol3, .grillaProductos .prodsTopp .prodsBolsa .fotoProdBol3, .grillaProductos .prodsBolsa .prodsTopp .fotoProdBol3, .grillaProductos .prodsDeco .prodsBolsa .fotoProdBol3, .grillaProductos .prodsBolsa .prodsDeco .fotoProdBol3, .grillaProductos .prodsCarnav .prodsBolsa .fotoProdBol3, .grillaProductos .prodsBolsa .prodsCarnav .fotoProdBol3, .grillaProductos .prodsBolsa .fotoProdBol3 {
       width: 230px;
       height: 250px;
       padding: 20px; }
     .grillaProductos .prodsPinatas .pprodPina, .grillaProductos .prodsGuir .pprodPina, .grillaProductos .prodsTopp .pprodPina, .grillaProductos .prodsDeco .pprodPina, .grillaProductos .prodsCarnav .pprodPina, .grillaProductos .prodsBolsa .pprodPina, .grillaProductos .prodsGuir .pprodGuir, .grillaProductos .prodsTopp .pprodTopp, .grillaProductos .prodsDeco .pprodDeco, .grillaProductos .prodsCarnav .pprodCar, .grillaProductos .prodsBolsa .pprodBol {
-      font-size: 20px;
+      font-size: 30px;
       text-align: center; }
   .grillaProductos .prodsGuir {
     grid-area: prodsGuir; }
@@ -221,12 +236,12 @@ footer {
     border: solid #77C1F7;
     grid-area: personalizados; }
     .grillaProductos .personalizados .tituloPersonalizados {
-      font-size: 20px;
+      font-size: 30px;
       color: #F18BD6;
       font-weight: bold;
       text-align: center; }
     .grillaProductos .personalizados .pprodPers {
-      font-size: 20px;
+      font-size: 25px;
       text-align: center; }
 
 /*

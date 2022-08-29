@@ -11,11 +11,11 @@
     <title>Contacto</title>    
 </head>
 <body>
-  <div class="grillaContacto">
+  <header class="header">  
     <div class="marca">
         <h1>PAPER CRAFTS</h1>
     </div>  
-    <div class="container fluid barraNav d-flex justify-content-around">
+    <div class="fluid barraNav d-flex justify-content-around">
       <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,68 +43,72 @@
         </div>
       </nav>
     </div> 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-        </div>
-      </div>
-      <form>
-        <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3">
+  </header>
+  <main>    
+    <div class="grillaContacto">
+      <div class="container">
+        <div class="row nyp">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
           </div>
         </div>
-        <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Tipo de evento</legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-              <label class="form-check-label" for="gridRadios1">
-                Cumpleaños infantil
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-              <label class="form-check-label" for="gridRadios2">
-                Cumpleaños adulto
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-              <label class="form-check-label" for="gridRadios3">
-                Corporativo
-              </label>              
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
-              <label class="form-check-label" for="gridRadios4">
-                Otro
-              </label>
-            </div>
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-              <label for="floatingTextarea">cuál?</label>
-            </div>
+        <form>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3">
             </div>
           </div>
-        </fieldset>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Tipo de evento</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Cumpleaños infantil
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Cumpleaños adulto
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                <label class="form-check-label" for="gridRadios3">
+                  Corporativo
+                </label>              
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+                <label class="form-check-label" for="gridRadios4">
+                  Otro
+                </label>
+              </div>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">cuál?</label>
+              </div>
+              </div>
+            </div>
+          </fieldset>
                 <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-          <label for="floatingTextarea2">Mensaje</label>
-        </div>        
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Mensaje</label>
+          </div>        
+          <button type="submit" class="btn btn-primary enviar">Enviar</button>
+        </form>
+      </div>
+    </main>  
     <footer>
       <div>
         <h4 class="seguinos">Seguinos en nuestras redes sociales</h4> 
-          <a href="https://www.facebook.com/" target="_blank"></a>
-          <a href="https://www.instagram.com/" target="_blank"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="../images/facebook.svg" alt="facebook" class="fb"></a>
+        <a href="https://www.instagram.com/" target="_blank"> <img src="../images/instagram.svg" alt="instagram" class="ig"></a>
       </div>
     </footer>   
   </div> 

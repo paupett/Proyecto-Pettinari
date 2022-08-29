@@ -4,8 +4,6 @@
     display: grid;
     grid-template-columns: 1;
     grid-template-areas: 
-    "marca"
-    "barraNav"
     "nosotros"
     "fotoSole"
     "fotoPau"
@@ -15,7 +13,7 @@
 
     .nosotros{
         grid-area: nosotros;
-    
+            
         .syp{
             color: #77C1F7;
             font-size: 70px;
@@ -65,8 +63,12 @@
         "footer      footer";
         gap: 10px;
     
-        .sobreNos{
-            font-size: 30px;
-        }
+        .nosotros{
+            margin-left: 100px;    
+
+            .sobreNos{
+                font-size: 30px;
+            }
+        }        
     }
 }

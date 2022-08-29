@@ -2,5 +2,17 @@
     font-family: 'Amatic SC', cursive;
     background-color: $colorFondo; 
     padding: 20px;
-    font-size: 25px
+    font-size: 25px;
+
+    .nyp{
+        margin-bottom: 10px; 
+    }
+
+    .enviar{
+        margin-top: 30px;
+        background-color:  #F18BD6;
+        border-color:  #F18BD6;
+        font-size: 25px;
+        font-weight: bold;
+    }
 }

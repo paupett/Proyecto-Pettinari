@@ -4,23 +4,22 @@
     display: grid;
     grid-template-columns: 1;
     grid-template-areas: 
-    "marca"
-    "barraNav"
     "todo"
     "fotoTodo"
     "pinata"
     "deco"
-    "mas"
-    "footer";
+    "mas";
     gap: 10px;
     text-align: center;
     justify-content: center;
+
     
     .todo{
         background-color: #77C1F7;
         text-align: center;
         grid-area: todo;
         width: 299px;
+        margin-top: 10px;
     
         .tituloTodo{
             font-size: 40px;
@@ -35,26 +34,35 @@
 
     .pinata{
         grid-area: pinata;
-    }
-
-    .fotoPinata{
-        border: solid;
-        border-color: #77C1F7;
+    
+        .fotoPinata{
+            @include bordes-fotos (solid, #77C1F7, dotted, 4px);
+        }
+        .textoIndex{
+            font-size: 30px;
+        }
     }
 
     .deco{
         grid-area: deco;
 
         .fotoDeco{
-            border: solid;
-            border-color: #F18BD6;
+            @include bordes-fotos (solid, #F18BD6, double, 4px);
+        }
+        .textoIndex{
+            font-size: 30px;
         }
     }
+
     .mas{
         grid-area: mas;
 
         .muchoMas{
-            @extend .fotoPinata;
+            @include bordes-fotos (solid, #77c1f7,dashed, 4px);
+                
+        }
+        .textoIndex{
+            font-size: 30px;
         }
     }
 }
@@ -66,13 +74,10 @@
         display: grid;
         grid-template-columns: 2;
         grid-template-areas: 
-        "marca      marca"
-        "barraNav   barraNav"
         "todo       todo"
         "fotoTodo   fotoTodo"
         "pinata     deco"
-        "mas        mas"
-        "footer     footer";
+        "mas        mas";
         justify-content: center;
 
         .todo{
@@ -88,14 +93,7 @@
                 }
             }
         }
-
-        .pinata,
-        .deco,
-        .mas{
-            display: flex;
-            flex-direction: column;
-        }
-
+    
         .fotoPinata{
             transition-duration: 2s;
     
@@ -119,26 +117,21 @@
                 transform:translate(10px, 10px)
             }
         }
-
     }
-    
 }
+
 @media screen and (min-width:768px){
     .grillaIndex{
         display: grid;
         grid-template-columns: 3;
         grid-template-areas: 
-        "marca      marca     marca"
-        "barraNav   barraNav  barraNav"
         "todo       todo      todo"
         "fotoTodo   fotoTodo  fotoTodo"
-        "pinata     deco      mas"
-        "footer     footer    footer";
+        "pinata     deco      mas";
 
         .todo{
             font-size: 30px;
             width: 700px;
         }
     }
-
 }

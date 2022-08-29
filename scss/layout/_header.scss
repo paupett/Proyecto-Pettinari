@@ -1,17 +1,17 @@
 .marca{
-    grid-area: marca;
+    /*grid-area: marca;*/
     font-family: 'Chelsea Market', cursive;
     font-size: 10px;
     text-align: center;
     padding: 20px 0px 20px 0px;
+    background-color: $colorFondo ;
 }
 
 .barraNav{
     background-color: #F18BD6;
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
-    padding: 5px 5px 5px 5px;
-    grid-area: barraNav;
+    /*grid-area: barraNav;*/
 
     ul{
         list-style: none;
